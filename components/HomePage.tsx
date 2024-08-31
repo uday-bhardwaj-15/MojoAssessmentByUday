@@ -26,9 +26,9 @@ type Stats = {
 };
 
 const pages: Page[] = [
-  { id: "1", name: "My Cool Page" },
-  { id: "2", name: "My Awesome Page" },
-  { id: "3", name: "My Amazing Page" },
+  { id: "1", name: "Test Page 1" },
+  { id: "2", name: "Test Page 2" },
+  { id: "3", name: "Test Page 3" },
 ];
 
 const pageData: Record<string, Stats> = {
@@ -62,14 +62,12 @@ const HomePage = () => {
 
   useEffect(() => {
     if (selectedPage) {
-      // Simulating API call with since and until parameters
       setStats(pageData[selectedPage]);
     }
   }, [selectedPage, since, until]);
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center p-4 overflow-hidden">
-      {/* Static background elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
           <div
